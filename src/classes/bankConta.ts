@@ -1,22 +1,16 @@
-
-let cachorro ={
-    nome:"King",
-    idade:5,
-    cor:"Beje",
-    nomecachorro(){
-        console.log("Au Au meu nome e "+this.nome)
-    }
-}
-
+function randomIntFromInterval(min:number, max:number) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min)
+  }
+  
 
 class BankAccount {
     nome:string
-    id:string
+    id: number
     senha:string
     private _saldo :number
-    constructor(nomeFornecido: string, idFornecido:string,senhaFornecido:string){
+    constructor(nomeFornecido: string, senhaFornecido:string,  idFornecido: number = randomIntFromInterval(1, 99999999)){
         this.nome =nomeFornecido
-        this.id=idFornecido
+        this.id = idFornecido
         this.senha=senhaFornecido
         this._saldo = 0
     }
@@ -32,7 +26,6 @@ class BankAccount {
     }
 }
 
-const contaJulio = new BankAccount("Julio","123d","jucecaes",)
 
 
-export {cachorro, contaJulio, BankAccount}
+export {BankAccount}
