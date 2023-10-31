@@ -1,14 +1,11 @@
-function randomIntFromInterval(min:number, max:number) { // min and max included 
-    return Math.floor(Math.random() * (max - min + 1) + min)
-  }
-  
+
 
 class BankAccount {
     nome:string
     id: number
     senha:string
     private _saldo :number
-    constructor(nomeFornecido: string, senhaFornecido:string,  idFornecido: number = randomIntFromInterval(1, 99999999)){
+    constructor(nomeFornecido: string, senhaFornecido:string,  idFornecido: number){
         this.nome =nomeFornecido
         this.id = idFornecido
         this.senha=senhaFornecido
